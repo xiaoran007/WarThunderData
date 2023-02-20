@@ -10,6 +10,11 @@ html, body{
 	margin: 0 auto;
 }
 
+#title3{
+	font-size: 2rem;
+	text-align: center;
+}
+
 a {
   color: #00d1b2;
 }

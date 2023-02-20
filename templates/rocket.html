@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rocket</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h2>Local Time</h2>
+    {{ Time }}
+    <hr>
+    <h2>Data</h2>
+    <hr>
+    <table class="t1">
+     {% for item in DataList %}
+         <tr>
+            <td> {{ item }} </td>
+         </tr>
+    {% endfor %}
+    </table>
+    <form action="/" method="GET">
+        <p><input type = "submit" value = "Back to main page" /></p>
+    </form>
+    <hr>
+</body>
+
+</html>

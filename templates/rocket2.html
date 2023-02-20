@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Rocket</title>
+	<!-- css files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+
+	<link rel="icon" type="image/x-icon" href="../static/img/favicon.png">
+	<meta name="author" content="Ran Xiao">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="nav container void-background">
+			<!-- This "nav-menu" is hidden on mobile -->
+			<!-- Add the modifier "is-active" to display it on mobile -->
+			<div class="nav-left">
+				<a href="/indev/" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-medium"></i>
+					</span>
+				</a>
+				<a href="https://github.com/xiaoran007" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>
+				</a>
+				<a href="/indev/" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-twitter"></i>
+					</span>
+				</a>
+			</div>
+
+			<div class="nav-right nav-menu">
+				<a class="nav-item" href="/">About</a>
+				<a class="nav-item" href="/search/">To Search</a>
+				<a class="nav-item" href="/">WT Reverse Data</a>
+			</div>
+
+			<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+			<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+			<span class="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</nav>
+
+		<!-- About Me -->
+		<section id="about" class="section section-1">
+			<div class="container has-text-centered">
+				<!-- Source: https://flic.kr/p/pAZBNK -->
+				<img class="avatar" src="../static/img/rocket2.jpg">
+			</div>
+			<div class="container"></br>
+                <h3 align="center" id="title3">Rocket Launch Forecast</h3>
+				<p class="intro" align="center" id="intro1">
+					火箭发射预报
+				</p>
+			</div>
+		</section>
+
+		<!-- time -->
+		<section  id="projects" class="section section-2">
+			<div class="container">
+				<div class="has-text-centered">
+					<h3 class="title is-3">Data Time / 数据时间</h3>
+				</div>
+                <h4 class="is-4">{{ Time }}</h4>
+			</div>
+		</section>
+
+		<!-- data -->
+		<section id="social" class="section section-3">
+			<div class="container">
+				<div class="has-text-centered">
+					<h3 class="title is-3">Data / 预报信息</h3>
+				</div>
+				<table class="table">
+                    {% for item in DataList %}
+                        <tr>
+                            <td> {{ item }} </td>
+                         </tr>
+                    {% endfor %}
+                </table>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<section class="section-4 has-text-centered container">
+			<a href="http://www.hassanali.me/about">Template From Hassan Ali</a>
+		</section>
+
+		<!-- Scripts  -->
+		<script src="../static/js/controller.js"></script>
+	</body>
+</html>
